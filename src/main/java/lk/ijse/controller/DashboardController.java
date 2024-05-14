@@ -36,6 +36,7 @@ public class DashboardController {
         }
         root.getChildren().clear();
         root.getChildren().add(rootNode);
+
     }
 
     @FXML
