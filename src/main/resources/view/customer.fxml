@@ -19,21 +19,21 @@
       <Button fx:id="btnDelete" layoutX="730.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="123.0" text="Delete" />
       <Button fx:id="btnSave" layoutX="730.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="123.0" text="Save" />
       <Button fx:id="btnClear" layoutX="730.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="123.0" text="Clear" />
-      <TextField fx:id="txtCustomerId" layoutX="134.0" layoutY="189.0" prefHeight="32.0" prefWidth="237.0" />
-      <TextField fx:id="txtAddress" layoutX="445.0" layoutY="257.0" prefHeight="32.0" prefWidth="237.0" />
-      <TextField fx:id="txtCustomerName" layoutX="445.0" layoutY="189.0" prefHeight="32.0" prefWidth="237.0" />
+      <TextField fx:id="txtCustomerId" layoutX="134.0" layoutY="189.0" onAction="#txtCustomerIdOnaction" prefHeight="32.0" prefWidth="237.0" />
+      <TextField fx:id="txtAddress" layoutX="445.0" layoutY="257.0" onAction="#txtAddressOnAction" prefHeight="32.0" prefWidth="237.0" />
+      <TextField fx:id="txtCustomerName" layoutX="445.0" layoutY="189.0" onAction="#txtCustomerNameOnAction" prefHeight="32.0" prefWidth="237.0" />
       <Text layoutX="134.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id:" />
       <Text layoutX="446.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:" />
       <Text layoutX="445.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
-      <TableView fx:id="tblCustomer" layoutX="186.0" layoutY="352.0" prefHeight="216.0" prefWidth="496.0">
+      <TableView fx:id="tblCustomer" layoutX="186.0" layoutY="352.0" onSort="#tblCustomerOnAction" prefHeight="216.0" prefWidth="496.0">
         <columns>
-          <TableColumn fx:id="colCusID" prefWidth="89.0" text="Cus ID" />
-            <TableColumn fx:id="colCusName" prefWidth="155.0" text="Cus Name" />
-            <TableColumn fx:id="colContactNum" prefWidth="113.0" text="Contact Num" />
-            <TableColumn fx:id="colAddress" prefWidth="138.0" text="Address" />
+          <TableColumn fx:id="colCusID" onEditStart="#colCusIDOnAction" prefWidth="89.0" text="Cus ID" />
+            <TableColumn fx:id="colCusName" onEditStart="#colCusNameOnAction" prefWidth="155.0" text="Cus Name" />
+            <TableColumn fx:id="colContactNum" onEditStart="#colContactNumOnAction" prefWidth="113.0" text="Contact Num" />
+            <TableColumn fx:id="colAddress" onEditStart="#colAddressOnAction" prefWidth="138.0" text="Address" />
         </columns>
       </TableView>
-      <TextField fx:id="txtContactNumber" layoutX="134.0" layoutY="257.0" prefHeight="32.0" prefWidth="237.0" />
+      <TextField fx:id="txtContactNumber" layoutX="134.0" layoutY="257.0" onAction="#txtContactNumberOnAction" prefHeight="32.0" prefWidth="237.0" />
       <Text layoutX="134.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:" />
    </children>
 </AnchorPane>

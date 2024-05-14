@@ -20,7 +20,26 @@ public class DashboardController {
     @FXML
     private Button btnEmployee;
 
+    @FXML
+    private Button btnEquipment;
 
+    @FXML
+    private Button btnEvent;
+
+    @FXML
+    private Button btnFood;
+
+    @FXML
+    private Button btnMenu;
+
+    @FXML
+    private Button btnOrder;
+
+    @FXML
+    private Button btnPayment;
+
+    @FXML
+    private Button btnVehicle;
 
     @FXML
     private AnchorPane rootNode;

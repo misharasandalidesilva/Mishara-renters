@@ -19,18 +19,18 @@
         <Button fx:id="btnDelete" layoutX="730.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="123.0" text="Delete" />
         <Button fx:id="btnSave" layoutX="730.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="123.0" text="Save" />
         <Button fx:id="btnClear" layoutX="730.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="123.0" text="Clear" />
-        <TextField fx:id="txtCustomerId" layoutX="134.0" layoutY="189.0" prefHeight="32.0" prefWidth="237.0" />
-        <TextField fx:id="txtCustomerName" layoutX="445.0" layoutY="189.0" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtEquipmentId" layoutX="134.0" layoutY="189.0" onAction="#txtEquipmentIdOnAction" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtEquipmentName" layoutX="445.0" layoutY="189.0" onAction="#txtEquipmentNameOnAction" prefHeight="32.0" prefWidth="237.0" />
         <Text layoutX="134.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment Id:" />
         <Text layoutX="446.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment Name:" />
-        <TableView fx:id="tblCustomer" layoutX="260.0" layoutY="357.0" prefHeight="216.0" prefWidth="357.0">
+        <TableView fx:id="tblEquipment" layoutX="260.0" layoutY="357.0" onSort="#tblEquipmentOnAction" prefHeight="216.0" prefWidth="357.0">
             <columns>
-                <TableColumn fx:id="colCusID" prefWidth="89.0" text="Equipment ID" />
-                <TableColumn fx:id="colCusName" prefWidth="155.0" text="Equipment Name" />
-                <TableColumn fx:id="colContactNum" prefWidth="113.0" text="Equipment Qty" />
+                <TableColumn fx:id="colEquipmentID" onEditStart="#colEquipmentIDOnAction" prefWidth="89.0" text="Equipment ID" />
+                <TableColumn fx:id="colEquipmentName" onEditStart="#colEquipmentNameOnAction" prefWidth="155.0" text="Equipment Name" />
+                <TableColumn fx:id="colEquipmentQty" onEditStart="#colEquipmentQtyOnAction" prefWidth="113.0" text="Equipment Qty" />
             </columns>
         </TableView>
-        <TextField fx:id="txtContactNumber" layoutX="134.0" layoutY="257.0" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtEquipmentQty" layoutX="134.0" layoutY="257.0" onAction="#txtEquipmentQtyOnAction" prefHeight="32.0" prefWidth="237.0" />
         <Text layoutX="134.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment qty:" />
     </children>
 </AnchorPane>

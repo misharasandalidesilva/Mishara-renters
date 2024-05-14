@@ -19,24 +19,24 @@
         <Button fx:id="btnDelete" layoutX="730.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="123.0" text="Delete" />
         <Button fx:id="btnSave" layoutX="730.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="123.0" text="Save" />
         <Button fx:id="btnClear" layoutX="730.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="123.0" text="Clear" />
-        <TextField fx:id="txtMenuCode" layoutX="134.0" layoutY="166.0" prefHeight="32.0" prefWidth="237.0" />
-        <TextField fx:id="txtFoodId" layoutX="445.0" layoutY="234.0" prefHeight="32.0" prefWidth="237.0" />
-        <TextField fx:id="txtMenuName" layoutX="445.0" layoutY="166.0" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtMenuCode" layoutX="134.0" layoutY="166.0" onAction="#txtMenuCodeOnAction" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtFoodId" layoutX="445.0" layoutY="234.0" onAction="#txtFoodIdOnAction" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtMenuName" layoutX="445.0" layoutY="166.0" onAction="#txtMenuNameOnAction" prefHeight="32.0" prefWidth="237.0" />
         <Text layoutX="134.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Code:" />
         <Text layoutX="445.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Name:" />
         <Text layoutX="445.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Id:" />
-        <TableView fx:id="tblMenu" layoutX="170.0" layoutY="376.0" prefHeight="216.0" prefWidth="536.0">
+        <TableView fx:id="tblMenu" layoutX="170.0" layoutY="376.0" onSort="#tblMenuOnAction" prefHeight="216.0" prefWidth="536.0">
             <columns>
-                <TableColumn fx:id="colCusID" prefWidth="89.0" text="Menu Code" />
-                <TableColumn fx:id="colMenuName" prefWidth="113.0" text="Menu Name" />
-                <TableColumn fx:id="colDescription" prefWidth="138.0" text="Description" />
-                <TableColumn fx:id="colFoodId" prefWidth="95.0" text="Food ID" />
-            <TableColumn fx:id="colOrderId" prefWidth="100.0" text="Order ID" />
+                <TableColumn fx:id="colMenuCode" onEditStart="#colMenuCodeOnAction" prefWidth="89.0" text="Menu Code" />
+                <TableColumn fx:id="colMenuName" onEditStart="#colMenuNameOnAction" prefWidth="113.0" text="Menu Name" />
+                <TableColumn fx:id="colDescription" onEditStart="#colDescriptionOnAction" prefWidth="138.0" text="Description" />
+                <TableColumn fx:id="colFoodId" onEditStart="#colFoodIdOnAction" prefWidth="95.0" text="Food ID" />
+            <TableColumn fx:id="colOrderId" onEditStart="#colOrderIdOnAction" prefWidth="100.0" text="Order ID" />
             </columns>
         </TableView>
-        <TextField fx:id="txtDescription" layoutX="134.0" layoutY="231.0" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtDescription" layoutX="134.0" layoutY="231.0" onAction="#txtDescriptionOnAction" prefHeight="32.0" prefWidth="237.0" />
         <Text layoutX="135.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
-      <TextField fx:id="txtOrderId" layoutX="134.0" layoutY="299.0" prefHeight="32.0" prefWidth="237.0" />
+      <TextField fx:id="txtOrderId" layoutX="134.0" layoutY="299.0" onAction="#txtOrderIdOnAction" prefHeight="32.0" prefWidth="237.0" />
       <Text layoutX="135.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Id:" />
     </children>
 </AnchorPane>

@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class CustomerController {
 
@@ -32,6 +33,9 @@ public class CustomerController {
 
     @FXML
     private TableColumn<?, ?> colCusName;
+
+    @FXML
+    private AnchorPane root;
 
     @FXML
     private TableView<?> tblCustomer;
@@ -65,6 +69,51 @@ public class CustomerController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void colAddressOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void colContactNumOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void colCusIDOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void colCusNameOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void tblCustomerOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtAddressOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtContactNumberOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtCustomerIdOnaction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtCustomerNameOnAction(ActionEvent event) {
 
     }
 
