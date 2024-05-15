@@ -7,12 +7,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeTm {
-    private String E_id;
+public class OrdersTm {
+    private String O_id;
 
-    private String E_name;
+    private String Qty;
 
-    private String E_Contact;
+    private String Status;
 
-    private String E_time;
+    private String C_id;
+
+    private String E_Code;
 }

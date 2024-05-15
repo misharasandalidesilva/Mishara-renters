@@ -2,13 +2,10 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
-public class OrderController {
+public class OrdersController {
 
     @FXML
     private Button btnClear;
@@ -133,4 +130,9 @@ public class OrderController {
 
     }
 
+    public void tblOrdersOnAction(SortEvent<TableView> tableViewSortEvent) {
+    }
+
+    public void txtSearchOnAction(ActionEvent actionEvent) {
+    }
 }

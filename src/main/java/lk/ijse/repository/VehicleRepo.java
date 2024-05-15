@@ -1,4 +1,4 @@
 package lk.ijse.repository;
 
-public class OrderRepo {
+public class VehicleRepo {
 }

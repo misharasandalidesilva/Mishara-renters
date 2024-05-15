@@ -7,12 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Menu {
-    private String M_Code;
+public class Food {
+    private String F_id;
 
-    private String M_name;
+    private String F_qty;
 
     private String Description;
-
-    private String F_id;
 }

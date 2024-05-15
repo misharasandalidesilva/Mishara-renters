@@ -8,9 +8,8 @@
 
 <AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardController">
    <children>
-      <Button layoutX="1119.0" layoutY="625.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="244.0" style="-fx-background-color: pink;" text="Button" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#768ea4" height="708.0" stroke="BLACK" strokeType="INSIDE" width="382.0" />
-      <AnchorPane fx:id="root" layoutX="440.0" layoutY="48.0" prefHeight="612.0" prefWidth="876.0">
+      <AnchorPane fx:id="Load" layoutX="382.0" layoutY="60.0" prefHeight="612.0" prefWidth="876.0">
          <children>
             <Text layoutX="354.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="244.0">
                <font>
@@ -22,7 +21,7 @@
       <Button fx:id="btnCustomer" layoutX="69.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Customer" />
       <Button fx:id="btnEmployee" layoutX="69.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Employee" />
       <Button fx:id="btnEvent" layoutX="69.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnEventOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Event" />
-      <Button fx:id="btnOrder" layoutX="69.0" layoutY="281.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Order" />
+      <Button fx:id="btnOrder" layoutX="69.0" layoutY="281.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Orders" />
       <Button fx:id="btnEquipment" layoutX="69.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnEquipmentOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Equipment" />
       <Button fx:id="btnFood" layoutX="69.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnFoodOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Food" />
       <Button fx:id="btnMenu" layoutX="69.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnMenuOnAction" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: pink;" text="Menu" />

@@ -7,12 +7,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Menu {
-    private String M_Code;
+public class Orders {
+    private String O_id;
 
-    private String M_name;
+    private String Qty;
 
-    private String Description;
+    private String Status;
 
-    private String F_id;
+    private String C_id;
+
+    private String E_Code;
 }

@@ -104,4 +104,6 @@ public class EventController {
 
     }
 
+    public void txtSearchOnAction(ActionEvent actionEvent) {
+    }
 }

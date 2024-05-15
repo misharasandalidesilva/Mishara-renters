@@ -1,4 +1,4 @@
 package lk.ijse.model;
 
-public class Order {
+public class Vehicle {
 }

@@ -1,18 +1,20 @@
 package lk.ijse.controller;
 
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
-import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 
 public class DashboardController {
-
-    @FXML
-    private AnchorPane root;
 
     @FXML
     private Button btnCustomer;
@@ -42,92 +44,144 @@ public class DashboardController {
     private Button btnVehicle;
 
     @FXML
+    private AnchorPane root;
+
+    @FXML
     private AnchorPane rootNode;
 
     @FXML
-    void btnCustomerOnAction(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/customer.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
+    private AnchorPane Load;
+
+    @FXML
+    void btnCustomerOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/customer.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
+    }
+
+    @FXML
+    void btnEmployeeOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/employee.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
 
     }
 
     @FXML
-    void btnEmployeeOnAction(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/employee.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
+    void btnEquipmentOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/equipment.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
+
 
     }
 
     @FXML
-    void btnEquipmentOnAction(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/equipment.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
-    }
+    void btnEventOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/event.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
 
 
-
-
-    @FXML
-    void btnEventOnAction(ActionEvent event) {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/event.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
     }
 
     @FXML
-    void btnMenuOnAction(ActionEvent event) {
+    void btnFoodOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/food.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/menu.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
+
     }
 
     @FXML
-    void btnOrderOnAction(ActionEvent event) {
+    void btnMenuOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/menu.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/order.fxml"));
-        Parent rootNode = null;
-        try {
-            rootNode = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        root.getChildren().clear();
-        root.getChildren().add(rootNode);
+
     }
 
+    @FXML
+    void btnOrderOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/orders.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
 
+
+    }
+
+    @FXML
+    void btnPaymentOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/payment.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
+
+
+    }
+
+    @FXML
+    void btnVehicleOnAction(ActionEvent event) throws IOException {
+        URL resource = getClass().getResource("/view/vehicle.fxml");
+        assert resource != null;
+        Parent load = FXMLLoader.load(resource);
+        Load.getChildren().clear();
+        Load.getChildren().add(load);
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), Load);
+        transition.setFromX(load.getScene().getWidth());
+        transition.setToX(0);
+        transition.play();
+
+
+    }
+
+}

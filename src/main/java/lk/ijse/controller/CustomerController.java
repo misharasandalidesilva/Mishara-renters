@@ -2,11 +2,13 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.model.Customer;
+import lk.ijse.repository.CustomerRepo;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public class CustomerController {
 
@@ -54,67 +56,138 @@ public class CustomerController {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        clearFields();
 
     }
+    public void initialize() {
+       getAllCustomers();
+        setCellValueFactory();
+        loadCustomerTable();
+    }
 
+    private void loadCustomerTable() {
+
+    }
+private void setCellValueFactory(){
+
+}
+    private List<Customer> getAllCustomers() {
+        List<Customer> customerList = null;
+        try {
+            customerList = CustomerRepo.getAll();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return customerList;
+    }
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        String C_id = txtCustomerId.getText();
 
+        try {
+            boolean isDeleted = CustomerRepo.delete(C_id);
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer deleted!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
+        String C_id = txtCustomerId.getText();
+        String C_name = txtCustomerName.getText();
+        String C_contact = txtContactNumber.getText();
+        String C_address = txtAddress.getText();
+
+        Customer customer = new Customer(C_id, C_name, C_contact, C_address);
+
+        try {
+            boolean isSaved = CustomerRepo.save(customer);
+            if (isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer saved!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+
+//        now we should persist our customer model
+
+    }
+
+    private void clearFields() {
+        txtCustomerId.setText("");
+        txtCustomerName.setText("");
+        txtContactNumber.setText("");
+        txtAddress.setText("");
 
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        String C_id = txtCustomerId.getText();
+        String C_name = txtCustomerId.getText();
+        String C_contact = txtContactNumber.getText();
+        String C_address = txtAddress.getText();
+
+        Customer customer = new Customer(C_id, C_name, C_contact, C_address);
+
+        try {
+            boolean isUpdated = CustomerRepo.update(customer);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
 
     }
-
     @FXML
-    void colAddressOnAction(ActionEvent event) {
+    void txtSearchOnAction(ActionEvent event) {
+        String id = txtCustomerId.getText();
 
+        try {
+            Customer customer = CustomerRepo.searchById(id);
+
+            if (customer != null) {
+                txtCustomerId.setText(customer.getC_id());
+                txtCustomerName.setText(customer.getC_name());
+                txtContactNumber.setText(customer.getC_contact());
+                txtAddress.setText(customer.getC_address());
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
-    @FXML
-    void colContactNumOnAction(ActionEvent event) {
-
+    public void txtEmployeeNameOnAction(ActionEvent actionEvent) {
+        
     }
 
-    @FXML
-    void colCusIDOnAction(ActionEvent event) {
-
+    public void txtEmployeeIdOnAction(ActionEvent actionEvent) {
     }
 
-    @FXML
-    void colCusNameOnAction(ActionEvent event) {
-
+    public void txtEmployeeTimeOnAction(ActionEvent actionEvent) {
     }
 
-    @FXML
-    void tblCustomerOnAction(ActionEvent event) {
-
+    public void tblEmployeeOnAction(SortEvent<TableView> tableViewSortEvent) {
     }
 
-    @FXML
-    void txtAddressOnAction(ActionEvent event) {
-
+    public void colEmployeeIDOnAction(TableColumn.CellEditEvent cellEditEvent) {
     }
 
-    @FXML
-    void txtContactNumberOnAction(ActionEvent event) {
-
+    public void colEmployeeNameOnAction(TableColumn.CellEditEvent cellEditEvent) {
     }
 
-    @FXML
-    void txtCustomerIdOnaction(ActionEvent event) {
-
+    public void colContactNumOnAction(TableColumn.CellEditEvent<?,?> cellEditEvent) {
     }
 
-    @FXML
-    void txtCustomerNameOnAction(ActionEvent event) {
-
+    public void colEmployeeTimeOnAction(TableColumn.CellEditEvent cellEditEvent) {
     }
 
+    public void txtContactNumberOnAction(ActionEvent actionEvent) {
+    }
 }
+
+

@@ -101,4 +101,6 @@ public class EquipmentController {
 
     }
 
+    public void txtSearchOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -19,19 +19,19 @@
         <Button fx:id="btnDelete" layoutX="730.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="123.0" text="Delete" />
         <Button fx:id="btnSave" layoutX="730.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="123.0" text="Save" />
         <Button fx:id="btnClear" layoutX="730.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="123.0" text="Clear" />
-        <TextField fx:id="txtEventCode" layoutX="134.0" layoutY="189.0" onAction="#txtEventCodeOnAction" prefHeight="32.0" prefWidth="237.0" />
-        <TextField fx:id="txtEventType" layoutX="445.0" layoutY="189.0" onAction="#txtEventTypeOnAction" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtEventCode" layoutX="134.0" layoutY="189.0" onAction="#txtSearchOnAction" prefHeight="32.0" prefWidth="237.0" />
+        <TextField fx:id="txtEventType" layoutX="445.0" layoutY="189.0" prefHeight="32.0" prefWidth="237.0" />
         <Text layoutX="134.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Code:" />
-        <Text layoutX="446.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Type:" />
-        <TableView fx:id="tblEvent" layoutX="228.0" layoutY="351.0" onSort="#tblEventOnAction" prefHeight="216.0" prefWidth="436.0">
+        <Text layoutX="446.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description;" />
+        <TableView fx:id="tblEvent" layoutX="228.0" layoutY="351.0" prefHeight="216.0" prefWidth="436.0">
             <columns>
-                <TableColumn fx:id="colEventCode" onEditStart="#colEventCodeOnAction" prefWidth="108.0" text="Evenet Code" />
-                <TableColumn fx:id="colEventType" onEditStart="#colEventTypeOnAction" prefWidth="155.0" text="Event Type" />
-                <TableColumn fx:id="colDescription" onEditStart="#colDescriptionOnAction" prefWidth="170.0" text="Description" />
+                <TableColumn fx:id="colE_Code" prefWidth="108.0" text="E_code" />
+                <TableColumn fx:id="colDescription" prefWidth="155.0" text="Description" />
+                <TableColumn fx:id="colType" prefWidth="170.0" text="Type" />
                 <TableColumn fx:id="colAddress" prefWidth="62.0" />
             </columns>
         </TableView>
-        <TextField fx:id="txtDescription" layoutX="134.0" layoutY="257.0" onAction="#txtDescriptionOnAction" prefHeight="32.0" prefWidth="237.0" />
-        <Text layoutX="134.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+        <TextField fx:id="txtDescription" layoutX="134.0" layoutY="257.0" prefHeight="32.0" prefWidth="237.0" />
+        <Text layoutX="134.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Type:" />
     </children>
 </AnchorPane>
