@@ -1,58 +1,69 @@
 package lk.ijse.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.model.Customer;
+import lk.ijse.model.tm.CustomerTm;
 import lk.ijse.repository.CustomerRepo;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerController {
 
-    @FXML
-    private Button btnClear;
 
-    @FXML
-    private Button btnDelete;
 
-    @FXML
-    private Button btnSave;
 
-    @FXML
-    private Button btnUpdate;
+        @FXML
+        private Button btnClear;
 
-    @FXML
-    private TableColumn<?, ?> colAddress;
+        @FXML
+        private Button btnDelete;
 
-    @FXML
-    private TableColumn<?, ?> colContactNum;
+        @FXML
+        private Button btnSave;
 
-    @FXML
-    private TableColumn<?, ?> colCusID;
+        @FXML
+        private Button btnUpdate;
 
-    @FXML
-    private TableColumn<?, ?> colCusName;
+        @FXML
+        private TableColumn<?, ?> colC_Name;
 
-    @FXML
-    private AnchorPane root;
+        @FXML
+        private TableColumn<?, ?> colC_address;
 
-    @FXML
-    private TableView<?> tblCustomer;
+        @FXML
+        private TableColumn<?, ?> colC_contact;
 
-    @FXML
-    private TextField txtAddress;
+        @FXML
+        private TableColumn<?, ?> colC_id;
 
-    @FXML
-    private TextField txtContactNumber;
+        @FXML
+        private AnchorPane root;
 
-    @FXML
-    private TextField txtCustomerId;
+        @FXML
+        private TableView<CustomerTm> tblCustomer;
 
-    @FXML
-    private TextField txtCustomerName;
+        @FXML
+        private TextField txtAddress;
+
+        @FXML
+        private TextField txtContactNumber;
+
+        @FXML
+        private TextField txtCustomerId;
+
+        @FXML
+        private TextField txtCustomerName;
+
+
+    private List<Customer> customerList = new ArrayList<>();
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
@@ -60,17 +71,38 @@ public class CustomerController {
 
     }
     public void initialize() {
-       getAllCustomers();
+       this.customerList=getAllCustomers();
         setCellValueFactory();
         loadCustomerTable();
     }
 
     private void loadCustomerTable() {
+        ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
+
+        for (Customer customer : customerList) {
+            CustomerTm customerTm = new CustomerTm(
+                    customer.getC_id(),
+                    customer.getC_name(),
+                    customer.getC_contact(),
+                    customer.getC_address()
+            );
+
+            tmList.add(customerTm);
+        }
+        tblCustomer.setItems(tmList);
+        Object selectedItem = tblCustomer.getSelectionModel().getSelectedItem();
+        System.out.println("selectedItem = " + selectedItem);
 
     }
-private void setCellValueFactory(){
 
-}
+
+    private void setCellValueFactory(){
+        colC_id.setCellValueFactory(new PropertyValueFactory<>("C_id"));
+        colC_Name.setCellValueFactory(new PropertyValueFactory<>("C_name"));
+        colC_address.setCellValueFactory(new PropertyValueFactory<>("C_contact"));
+        colC_contact.setCellValueFactory(new PropertyValueFactory<>("C_address"));
+    }
+
     private List<Customer> getAllCustomers() {
         List<Customer> customerList = null;
         try {
@@ -80,6 +112,7 @@ private void setCellValueFactory(){
         }
         return customerList;
     }
+
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String C_id = txtCustomerId.getText();
@@ -143,6 +176,7 @@ private void setCellValueFactory(){
         }
 
     }
+
     @FXML
     void txtSearchOnAction(ActionEvent event) {
         String id = txtCustomerId.getText();
@@ -162,7 +196,7 @@ private void setCellValueFactory(){
     }
 
     public void txtEmployeeNameOnAction(ActionEvent actionEvent) {
-        
+
     }
 
     public void txtEmployeeIdOnAction(ActionEvent actionEvent) {
@@ -189,5 +223,12 @@ private void setCellValueFactory(){
     public void txtContactNumberOnAction(ActionEvent actionEvent) {
     }
 }
+
+
+
+
+
+
+
 
 

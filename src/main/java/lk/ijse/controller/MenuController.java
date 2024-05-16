@@ -26,16 +26,16 @@ public class MenuController {
     private TableColumn<?, ?> colDescription;
 
     @FXML
-    private TableColumn<?, ?> colFoodId;
+    private TableColumn<?, ?> colF_id;
 
     @FXML
-    private TableColumn<?, ?> colMenuCode;
+    private TableColumn<?, ?> colM_code;
 
     @FXML
-    private TableColumn<?, ?> colMenuName;
+    private TableColumn<?, ?> colM_name;
 
     @FXML
-    private TableColumn<?, ?> colOrderId;
+    private TableColumn<?, ?> colO_id;
 
     @FXML
     private AnchorPane root;
@@ -79,57 +79,7 @@ public class MenuController {
     }
 
     @FXML
-    void colDescriptionOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void colFoodIdOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void colMenuCodeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void colMenuNameOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void colOrderIdOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void tblMenuOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtDescriptionOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtFoodIdOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtMenuCodeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtMenuNameOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtOrderIdOnAction(ActionEvent event) {
+    void txtSearchOnAction(ActionEvent event) {
 
     }
 

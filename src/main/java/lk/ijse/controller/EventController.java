@@ -29,10 +29,10 @@ public class EventController {
     private TableColumn<?, ?> colDescription;
 
     @FXML
-    private TableColumn<?, ?> colEventCode;
+    private TableColumn<?, ?> colE_Code;
 
     @FXML
-    private TableColumn<?, ?> colEventType;
+    private TableColumn<?, ?> colType;
 
     @FXML
     private AnchorPane root;
@@ -52,6 +52,7 @@ public class EventController {
     @FXML
     void btnClearOnAction(ActionEvent event) {
 
+
     }
 
     @FXML
@@ -70,40 +71,8 @@ public class EventController {
     }
 
     @FXML
-    void colDescriptionOnAction(ActionEvent event) {
+    void txtSearchOnAction(ActionEvent event) {
 
     }
 
-    @FXML
-    void colEventCodeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void colEventTypeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void tblEventOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtDescriptionOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtEventCodeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtEventTypeOnAction(ActionEvent event) {
-
-    }
-
-    public void txtSearchOnAction(ActionEvent actionEvent) {
-    }
 }

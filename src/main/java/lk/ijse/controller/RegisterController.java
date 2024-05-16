@@ -38,6 +38,8 @@ public class RegisterController {
         stage.centerOnScreen();
     }
 
+    public void btnRegisterNowOnAction(ActionEvent actionEvent) {
     }
+}
 
 

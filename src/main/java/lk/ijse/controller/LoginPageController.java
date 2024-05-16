@@ -36,20 +36,21 @@ public class LoginPageController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) throws SQLException, IOException {
-        String UserId = txtUserName.getText();
-        String pw = txtPassword.getText();
+        String User_name = txtUserName.getText();
+        String Password = txtPassword.getText();
 
-        checkCredential(UserId, pw);
+        checkCredential(User_name, Password);
 
     }
 
     private void checkCredential(String userId, String pw) throws SQLException, IOException {
-        String sql = "Select U_id, Password FROM User WHERE U_id =?";
+        String sql = "Select User_name, Password FROM User WHERE U_id =?";
         Connection connection = DbConnection.getInstance().getConnection();
         PreparedStatement pstm = connection.prepareStatement(sql);
         pstm.setObject(1, userId);
 
-        ResultSet resultSet = pstm.executeQuery();
+        ResultSet resultSet;
+        resultSet = pstm.executeQuery();
         if(resultSet.next()) {
             String dbPW = resultSet.getString(2);
 
@@ -65,7 +66,7 @@ public class LoginPageController {
 else {
                 new Alert(Alert.AlertType. INFORMATION,
 
-                        "user id  not found!").show();
+                        "user name  not found!").show();
             }
 
         }

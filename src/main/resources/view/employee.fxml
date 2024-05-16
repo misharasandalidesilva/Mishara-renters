@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="612.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerController">
+<AnchorPane fx:id="root" prefHeight="612.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeFormController">
     <children>
-        <Text layoutX="291.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Manage" wrappingWidth="294.13673210144043">
+        <Text fx:id="Employee" layoutX="291.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Manage" wrappingWidth="294.13673210144043">
             <font>
                 <Font name="Cambria Bold" size="33.0" />
             </font>
@@ -25,7 +25,7 @@
         <Text layoutX="134.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Id:" />
         <Text layoutX="446.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name:" />
         <Text layoutX="445.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Time:" />
-        <TableView fx:id="tblEmployee" layoutX="186.0" layoutY="352.0" prefHeight="216.0" prefWidth="496.0">
+        <TableView fx:id="tblEmployee" layoutX="190.0" layoutY="356.0" prefHeight="216.0" prefWidth="496.0">
             <columns>
                 <TableColumn fx:id="colE_id" prefWidth="89.0" text="E_id" />
                 <TableColumn fx:id="colE_Name" prefWidth="155.0" text="E_name" />
